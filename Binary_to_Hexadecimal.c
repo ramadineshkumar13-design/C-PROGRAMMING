@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+    long long binary ;
+    printf("Enter the Number:");
+    scanf("%lld",&binary);
+    int decimal =0; int base =1;int rem;
+    while(binary>0)
+    {
+        rem = binary%10;
+        decimal = decimal+rem*base;
+        binary= binary/10;
+        base = base*2;
+    }
+    printf("DECIMAL VALUE :%X",decimal);
+    return 0;
+}
